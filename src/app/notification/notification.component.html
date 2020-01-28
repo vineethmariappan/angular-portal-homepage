@@ -1,0 +1,25 @@
+<br><br>
+<mdb-card class="text-center" >
+  <mdb-card-header style="background-color: #303030; color: white;">Notifications</mdb-card-header>
+
+
+    <mat-tab-group [color]="Primary - blue-grey" mat-stretch-tabs class="example-stretched-tabs mat-elevation-z4">
+      <mat-tab label="SMS">
+
+        <div class="list-group" style="max-height: 250px;overflow-y: scroll;">
+         <app-sms-list *ngFor="let sms_1 of sms" [sms]="sms_1"></app-sms-list>
+        </div>
+      </mat-tab>
+      <mat-tab label="EMAIL"> 
+      
+        <div class="list-group" style="max-height: 250px;overflow-y: scroll;">
+          <app-email-list *ngFor="let email_1 of email" [email]="email_1"></app-email-list>
+        </div>
+
+      
+      </mat-tab>
+    </mat-tab-group>   
+      
+</mdb-card>
+
+

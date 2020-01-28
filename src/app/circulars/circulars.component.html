@@ -1,0 +1,27 @@
+<br><br><br><mdb-card class="text-center" style="width: 1150px;">
+  <mdb-card-header style="background-color: #303030; color: white;">Circulars</mdb-card-header>
+
+    <mat-tab-group [color]="Primary - blue-grey" mat-stretch-tabs class="example-stretched-tabs mat-elevation-z4">
+      <mat-tab label="COLLEGE">
+
+        <div class="list-group text-left" style="max-height: 250px;overflow-y: scroll;">
+        <app-college *ngFor="let content_1 of college" [content]="content_1"></app-college>
+        </div>
+
+      </mat-tab>
+      <mat-tab label="DEPARTMENT"> 
+        <div class="list-group text-left"  style="max-height: 250px;overflow-y: scroll;">
+        <app-dept-list *ngFor="let content_1 of deptList" [content]="content_1"></app-dept-list>
+      </div>
+      
+      </mat-tab>
+
+      <mat-tab label="EVENTS"> 
+        <div class="list-group text-left" style="max-height: 250px;overflow-y: scroll;">
+        <app-dept-list *ngFor="let content_1 of eventList" [content]="content_1"></app-dept-list>
+      </div>
+      </mat-tab>
+
+    </mat-tab-group>   
+
+</mdb-card>
